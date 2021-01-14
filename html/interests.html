@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Interests | Andrew Zheng</title>
+		<link rel="stylesheet" type="text/css" href="../css/personalweb.css">
+		<script>
+			var prevScrollpos = window.pageYOffset;
+			window.onscroll = function() {
+				var currentScrollPos = window.pageYOffset;
+			  if (prevScrollpos > currentScrollPos) {
+			    document.getElementById("disappear").style.top = "0";
+			  } else {
+			    document.getElementById("disappear").style.top = "-100px";
+			  }
+			  prevScrollpos = currentScrollPos;
+			}
+
+  		</script>
+	</head>
+	<body>
+		<!-- Nav Bar -->
+			<section class="navcontainer" id="disappear">
+				<div class="tablewrapper" >
+					<div class="table2">
+							<ul class="navbar">
+								
+							</ul>
+					</div>
+					<div class="table">
+							<ul class="navbar main">
+								<li>
+									<a href="../personalweb.html" class="special">HOME</a>
+								</li>
+								<li>
+									<a href="interests.html" class="special">INTERESTS</a>
+								</li>
+								<li>
+									<a href="quiz.html" class="special">QUIZ</a>
+								</li>
+								<li>
+									<a href="http://www.usaco.org/index.php?page=staff" target="_blank" class="special">CONTACT</a>
+								</li>
+							</ul>
+					</div>
+				</div>
+			</section>
+		<section class="interests">
+			<div>
+				<h2 class="header">INTERESTS</h2>
+				<div class="topic">
+					<div class="pic">
+						<img src="../images/coding.jpg" alt="programming" width="540px">
+					</div>
+					<div class="explanation">
+						<h2 class="heading">Programming</h2>
+						<div class="descrip">
+							ayo wassup
+						</div>
+					</div>
+				</div>
+
+				<div class="topic">
+					<div class="pic">
+						<video width="540px" controls>
+					  <source src="../images/ccc_intro2.mp4" type="video/mp4">
+					Your browser does not support the video tag.
+					</video>
+					</div>
+					<div class="explanation">
+						<h2 class="heading">Video Editing</h2>
+						<div class="descrip">
+							ayo wassup
+						</div>
+					</div>
+				</div>
+
+				<div class="topic">
+					<div class="pic">
+						<img src="..images/road-5.jpg" alt="Road" width="540px">
+					</div>
+					<div class="explanation">
+						<h2 class="heading">Photography</h2>
+						<div class="descrip">
+							ayo wassup
+						</div>
+					</div>
+				</div>
+
+				<div class="topic">
+					<div class="pic">
+						<img src="../images/cubing.jpg" alt="cubing" width="540px">
+					</div>
+					<div class="explanation">
+						<h2 class="heading">Cubing</h2>
+						<div class="descrip">
+							ayo wassup
+						</div>
+					</div>
+				</div>
+
+				<div class="topic">
+					<div class="pic">
+						<img src="../images/IMG_5889.jpg" alt="swimming" width="540px">
+					</div>
+					<div class="explanation">
+						<h2 class="heading">Swimming</h2>
+						<div class="descrip">
+							ayo wassup
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	</body>
+</html>

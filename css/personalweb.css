@@ -1,0 +1,227 @@
+body{
+	margin: 0px;
+
+}
+@font-face{
+	font-family: 'bestFont';
+	src: url('../fonts/JosefinSans-Bold.ttf');
+	font-style:normal;
+}
+
+@font-face{
+	font-family: 'regularFont';
+	src: url('../fonts/Montserrat-Regular.otf');
+	font-style:normal;
+}
+.parallax{
+	/* The image used */
+  background-image: url('../images/me_eyes.jpg');
+
+  /* Full height */
+  height: 1025px; 
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.welcome{
+	text-align: center;
+	line-height: 1025px;
+	color: white;
+	font-size: 80px;
+	font-family: 'bestFont';
+}
+
+h2{
+	font-family: 'bestFont';
+	font-size: 50px;
+}
+
+.highlight{
+	color: #32ce32;
+}
+
+
+.box{
+	padding: 10px;
+	background-color: black;
+}
+
+.about{
+	line-height: 2.4;
+	font-family: regularFont;
+	width: 40%;
+	margin-left: 10%;
+	font-size: 20px;
+	text-align: right;
+	display: inline-block;
+	vertical-align: top;
+}
+/*-----------------------*/
+/*NAVBAR CSS*/
+/*-----------------------*/
+.navbar li{
+  display: inline-block;
+  position: relative;
+  padding-left: 30px;
+  padding-right: 30px; 
+}
+
+
+#red{
+  color: #ff3b3b;
+}
+
+#blue{
+  color: #3b93ff;
+}
+
+#white{
+  color: #e8e8e8;
+}
+
+.tablewrapper{
+  display: table;
+  width: 100%;
+}
+
+.table1{
+  float: left;
+  width: 15%;
+}
+
+.table{
+  float: left;
+  width: 65%;
+
+}
+
+.main{
+  text-align: center;
+}
+
+.table2{
+  float: left;
+  width: 15%;
+}
+.table1 .navbar{
+  padding-right: 50px;
+}
+.navbar li a{
+  text-decoration: none;
+  color: #656565;
+  transition: color 0.3s ease;
+}
+
+.navbar li .special:hover{
+  color: #32ce32;
+}
+
+#disappear{
+  position: fixed;
+  transition: top 0.3s;
+  width: 100%;
+}
+
+.navcontainer{
+  padding-top: 10px;
+  border: none;
+  margin-bottom: 0px;
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 23px;
+  background-color: #050505;
+}
+
+.account{
+  float: right;
+  padding-right: 10px;
+  font-size: 15px;
+}
+
+.content{
+  margin-top: 10px;
+  display: none;
+  z-index: 1;
+  background-color: #050505;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+.content a{
+  display: block;
+  padding: 15px 35px;
+}
+
+.show{
+  display: block;
+}
+
+.red{
+	background-color: black;
+}
+
+/*-----------------------*/
+/*INTERESTS CSS*/
+/*-----------------------*/
+.interests{
+  padding-top: 75px;
+}
+
+.topic{
+  margin: 0 auto;
+  display: table;
+  clear: both;
+  width: 80%;
+  border-width: 2px;
+  border-style: solid;
+  border-color: #050505;
+  border-radius: 10px;
+  margin-bottom: 50px;
+  transition: color 0.3s ease;
+  transition: background-color 0.3s ease;
+}
+
+.topic:hover{
+  background-color: #050505;
+}
+
+.topic:hover .descrip{
+   color: #e8e8e8;
+}
+
+.topic:hover .heading{
+  color: #32ce32;
+}
+ 
+.pic{
+  float: left;
+  width: 40%;
+  padding: 10px;
+}
+
+.explanation{
+  float: left;
+  width: 40%;
+  padding: 10px;
+}
+
+.explanation h2{
+  font-size: 30px;
+}
+
+.descrip{
+  font-family: regularFont;
+}
+
+.header{
+  margin-left: 10%;
+}
+
+/*-----------------------*/
+/*QUIZ CSS*/
+/*-----------------------*/
+.quiz{
+  padding-top: 75px;
+}

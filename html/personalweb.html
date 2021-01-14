@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Home | Andrew Zheng</title>
+		<link rel="stylesheet" type="text/css" href="../css/personalweb.css">
+		<script>
+			var prevScrollpos = window.pageYOffset;
+			window.onscroll = function() {
+				var currentScrollPos = window.pageYOffset;
+			  if (prevScrollpos > currentScrollPos) {
+			    document.getElementById("disappear").style.top = "0";
+			  } else {
+			    document.getElementById("disappear").style.top = "-100px";
+			  }
+			  prevScrollpos = currentScrollPos;
+			}
+
+  		</script>
+	</head>
+	<body>
+		<!-- Nav Bar -->
+			<section class="navcontainer" id="disappear">
+				<div class="tablewrapper" >
+					<div class="table2">
+							<ul class="navbar">
+								
+							</ul>
+					</div>
+					<div class="table">
+							<ul class="navbar main">
+								<li>
+									<a href="personalweb.html" class="special">HOME</a>
+								</li>
+								<li>
+									<a href="interests.html" class="special">INTERESTS</a>
+								</li>
+								<li>
+									<a href="quiz.html" class="special">QUIZ</a>
+								</li>
+								<li>
+									<a href="http://www.usaco.org/index.php?page=staff" target="_blank" class="special">CONTACT</a>
+								</li>
+							</ul>
+					</div>
+				</div>
+			</section>
+		<div class="parallax welcome">
+			<span class="box">
+				HELLO, MY NAME IS <span class="highlight">ANDREW</span>
+			</span>
+		</div>
+		<section>
+			<center>
+			<h2>ABOUT <span class="highlight">ME</span></h2>
+			</center>
+
+			<div class="about">
+				My name is <span class="highlight">Andrew Zheng</span> and I am currently a Junior at American High School. I am aiming towards a major in the field of Computer Science. Besides CS, I also enjoy doing many other activities such as playing video games, cubing, and taking photographs. After school, I like to relax by watching YouTube for 4 hours straight and then feel guilty about not doing any work. However, I still manage to keep up with homework and have decent grades.
+			</div>
+			<img src="../images/hahakid.jpg" height=15%; width=15%; style="margin-left: 10px;">
+		</section>
+
+	</body>
+</html>
