@@ -77,8 +77,9 @@
             $answer1 = $_POST['question-1-answers'];
         
             $totalCorrect = $_POST['correct'];
+            $correct = (int)$totalCorrect;
             
-            if ($answer1 == "C") { $totalCorrect++; }
+            if ($answer1 == "C") { $correct++; }
             
         	?>">
 					<input type="submit" value="Continue" class="btnsubmit"/>

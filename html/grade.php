@@ -54,8 +54,9 @@
             		$answer2 = $_POST['question-2-answers'];
         
             		$totalCorrect = $_POST['correct'];
+            		$correct = (int)$totalCorrect;
             
-            		if ($answer2 == "B") { $totalCorrect++; }
+            		if ($answer2 == "B") { $correct++; }
             		echo "<div id='results'>$totalCorrect / 5 correct</div>";
         			?>
 			</form>
