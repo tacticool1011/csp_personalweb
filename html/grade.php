@@ -53,7 +53,7 @@
             
             		$answer2 = $_POST['question-2-answers'];
         
-            		$totalCorrect = $_POST['correct'];
+            		$totalCorrect = $_POST['correct1'];
             		$correct = (int)$totalCorrect;
             
             		if ($answer2 == "B") { $correct++; }

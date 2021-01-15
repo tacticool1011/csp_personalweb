@@ -53,12 +53,12 @@
 					<h3>WHICH IS MY FAVORITE SWIM STROKE?</h3>
 					<div>
 						<label class="container" for="question2-answers-A" >Freestyle
-						  <input type="radio" name="question2-answers" value="A" id="question-2-answers-A">
+						  <input type="radio" name="question2-answers" value="A">
 						  <span class="checkmark"></span>
 						</label>
 
 						<label class="container" for="question2-answers-B">Breaststroke
-						  <input type="radio" name="question2-answers" value="B" id="question-2-answers-B">
+						  <input type="radio" name="question2-answers" value="B">
 						  <span class="checkmark"></span>
 						</label>
 
@@ -72,7 +72,7 @@
 						  <span class="checkmark"></span>
 						</label>
                 	</div>
-                	<input name="correct" value="<?php
+                	<input name="correct1" value="<?php
             
             $answer1 = $_POST['question-1-answers'];
         
