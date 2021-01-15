@@ -80,7 +80,7 @@
             $correct = (int)$totalCorrect;
             
             if ($answer1 == "C") { $correct++; }
-            
+            echo "$correct";
         	?>">
 					<input type="submit" value="Continue" class="btnsubmit"/>
 			</form>

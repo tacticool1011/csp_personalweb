@@ -57,7 +57,7 @@
             		$correct = (int)$totalCorrect;
             
             		if ($answer2 == "B") { $correct++; }
-            		echo "<div id='results'>$totalCorrect / 5 correct</div>";
+            		echo "<div id='results'>$correct / 5 correct</div>";
         			?>
 			</form>
 		</section>
