@@ -72,7 +72,7 @@
 						  <span class="checkmark"></span>
 						</label>
                 	</div>
-                	<input name="correct">
+                	<input name="correct" value="0">
 					<input type="submit" value="Continue" class="btnsubmit"/>
 			</form>
 		</section>
