@@ -49,7 +49,7 @@
 				<h2 class="header">QUIZ</h2>
 			</div>
 			
-			<form action="question2.php" method = "post" id="quiz" class="question">
+			<form action="grade.php" method = "post" id="quiz" class="question">
 					<h3>WHICH LANGUAGE DO I PRIMARILY PROGRAM IN?</h3>
 					<div>
 						<label class="container" for="question1-answers-A" > Python

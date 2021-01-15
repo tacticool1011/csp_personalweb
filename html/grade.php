@@ -51,12 +51,12 @@
 			<form action="question1.php" method = "post" id="quiz" class="question">
 					<?php
             
-            		$answer2 = $_POST['question-2-answers'];
+            		$answer1 = $_POST['question-1-answers'];
         
-            		$totalCorrect = $_POST['correct1'];
+            		$totalCorrect = $_POST['correct'];
             		$correct = (int)$totalCorrect;
             
-            		if ($answer2 == "B") { $correct++; }
+            		if ($answer1 == "C") { $correct++; }
             		echo "<div id='results'>$correct / 5 correct</div>";
         			?>
 			</form>
