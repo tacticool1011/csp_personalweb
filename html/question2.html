@@ -48,8 +48,39 @@
 			<div>
 				<h2 class="header">QUIZ</h2>
 			</div>
-			<form action="question1.php" method = "post" id="quiz" class="question">
-					<h3>READY TO GET STARTED?</h3>
+			
+			<form action="grade.php" method = "post" id="quiz" class="question">
+					<h3>WHICH IS MY FAVORITE SWIM STROKE?</h3>
+					<div>
+						<label class="container" for="question2-answers-A" >Freestyle
+						  <input type="radio" name="question2-answers" value="A" id="question-2-answers-A">
+						  <span class="checkmark"></span>
+						</label>
+
+						<label class="container" for="question2-answers-B">Breaststroke
+						  <input type="radio" name="question2-answers" value="B" id="question-2-answers-B">
+						  <span class="checkmark"></span>
+						</label>
+
+						<label class="container" for="question2-answers-C">Backstroke
+						  <input type="radio" name="question2-answers" value="C" id="question-2-answers-C">
+						  <span class="checkmark"></span>
+						</label>
+
+						<label class="container" for="question2-answers-D">Butterfly
+						  <input type="radio" name="question2-answers" value="D" id="question-2-answers-D">
+						  <span class="checkmark"></span>
+						</label>
+                	</div>
+                	<input name="correct" value="<?php
+            
+            $answer1 = $_POST['question-1-answers'];
+        
+            $totalCorrect = $_POST['correct'];
+            
+            if ($answer1 == "C") { $totalCorrect++; }
+            
+        	?>">
 					<input type="submit" value="Continue" class="btnsubmit"/>
 			</form>
 		</section>
