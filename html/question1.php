@@ -45,13 +45,7 @@
 				</div>
 			</section>
 		<section class="quiz">
-			<div>
-				<h2 class="header">QUIZ</h2>
-				<form action="question1.php" method = "post" id="quiz">
-					<h3>What language do I primarily code in?</h3>
-					<input type="submit" value="Continue" />
-				</form>
-			</div>
+			alskjdf
 		</section>
 	</body>
 </html>
