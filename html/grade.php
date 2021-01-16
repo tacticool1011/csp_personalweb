@@ -10,7 +10,7 @@
 	}
 
 	//write query for all answers
-	$sql = 'SELECT * FROM problems ORDER BY id';
+	$sql = 'SELECT * FROM problems';
 
 	//make query & get result
 	$result = mysqli_query($conn, $sql);
