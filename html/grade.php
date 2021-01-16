@@ -1,3 +1,30 @@
+<?php
+	session_start();
+	$_SESSION['question-8-answers'] = $_POST['question-8-answers'];
+	//connect to databse
+	$conn = mysqli_connect('MySQL Model', 'b1ccdd76923f3f','
+5ec23673', 'quiz_answers');
+
+	//check connection
+	if(!$conn){
+		echo 'Connection error: ' . mysqli_connect_error();
+	}
+
+	//write query for all answers
+	$sql = 'SELECT id, correctans FROM problems ORDER BY id';
+
+	//make query & get result
+	$result = mysqli_query($conn, $sql);
+
+	//fetch the resulting rows as an array
+	$answers = mysqli_fetch_all($result, MYSQLI_ASSOC);
+
+	//free result from memory
+	mysqli_free_result($result);
+
+	//close connection
+	mysqli_close($conn);
+?>
 <!DOCTYPE html>
 <html>
 	<head>
@@ -49,16 +76,39 @@
 				<h2 class="header">QUIZ</h2>
 			</div>
 			<form action="question1.php" method = "post" id="quiz" class="question">
-					<?php
-            
-            		$answer1 = $_POST['question-1-answers'];
-        
-            		$totalCorrect = $_POST['correct'];
-            		$correct = (int)$totalCorrect;
-            
-            		if ($answer1 == "C") { $correct++; }
-            		echo "<div id='results'>$correct / 5 correct</div>";
-        			?>
+					<?php 
+					$i = 0;
+					$correct = 0;
+					foreach($answers as $answer){ 
+						if($answer['id'] == '1' and $answer['correctans'] == $_SESSION['question-1-answers']){
+							$correct++;
+						}
+						if($answer['id'] == '2' and $answer['correctans'] == $_SESSION['question-2-answers']){
+							$correct++;
+						}
+						if($answer['id'] == '3' and $answer['correctans'] == $_SESSION['question-3-answers']){
+							$correct++;
+						}
+						if($answer['id'] == '4' and $answer['correctans'] == $_SESSION['question-4-answers']){
+							$correct++;
+						}
+						if($answer['id'] == '5' and $answer['correctans'] == $_SESSION['question-5-answers']){
+							$correct++;
+						}
+						if($answer['id'] == '6' and $answer['correctans'] == $_SESSION['question-6-answers']){
+							$correct++;
+						}
+						if($answer['id'] == '7' and $answer['correctans'] == $_SESSION['question-7-answers']){
+							$correct++;
+						}
+						if($answer['id'] == '8' and $answer['correctans'] == $_SESSION['question-8-answers']){
+							$correct++;
+						}
+						?>
+            		<?php }?>
+            		<h3>YOUR RESULT:</h3>
+            		<h3><?php echo $correct?>/8</h3>
+        			
 			</form>
 		</section>
 	</body>

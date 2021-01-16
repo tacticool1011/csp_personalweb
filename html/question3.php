@@ -1,6 +1,6 @@
 <?php 
 	session_start();
-	$_SESSION['question-1-answers'] = $_POST['question-1-answers'];
+	$_SESSION['question-2-answers'] = $_POST['question-2-answers'];
 ?>
 <!DOCTYPE html>
 <html>
@@ -53,27 +53,27 @@
 				<h2 class="header">QUIZ</h2>
 			</div>
 			
-			<form action="question3.php" method = "post" id="quiz" class="question">
-					<h3>WHICH IS MY FAVORITE SWIM STROKE?</h3>
+			<form action="question4.php" method = "post" id="quiz" class="question">
+					<h3>What is my favorite photography style?</h3>
 					<div class="quizQ">
 						<div class="specificQ">
-	                        <input type="radio" name="question-2-answers" id="question-1-answers-A" value="A" />
-	                        <label for="question-2-answers-A">Fresstyle</label>
+	                        <input type="radio" name="question-3-answers" id="question-1-answers-A" value="A" />
+	                        <label for="question-3-answers-A">Portrait </label>
 	                    </div>
 	                    
 	                    <div class="specificQ">
-	                        <input type="radio" name="question-2-answers" id="question-1-answers-B" value="B" />
-	                        <label for="question-2-answers-B">Breaststroke</label>
+	                        <input type="radio" name="question-3-answers" id="question-1-answers-B" value="B" />
+	                        <label for="question-3-answers-B">Landscapes </label>
 	                    </div>
 	                    
 	                    <div class="specificQ">
-	                        <input type="radio" name="question-2-answers" id="question-1-answers-C" value="C" />
-	                        <label for="question-2-answers-C">Butterfly</label>
+	                        <input type="radio" name="question-3-answers" id="question-1-answers-C" value="C" />
+	                        <label for="question-3-answers-C">Sports </label>
 	                    </div>
 	                    
 	                    <div class="specificQ">
-	                        <input type="radio" name="question-2-answers" id="question-1-answers-D" value="D" />
-	                        <label for="question-2-answers-D">Backstroke</label>
+	                        <input type="radio" name="question-3-answers" id="question-1-answers-D" value="D" />
+	                        <label for="question-3-answers-D">All of the above</label>
 	                    </div>
                 	</div>
 					<input type="submit" value="Continue" class="btnsubmit"/>
