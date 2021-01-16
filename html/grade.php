@@ -2,7 +2,7 @@
 	session_start();
 	$_SESSION['question-8-answers'] = $_POST['question-8-answers'];
 	//connect to databse
-	$conn = mysqli_connect('MySQL Model', 'b1ccdd76923f3f','
+	$conn = mysqli_connect('us-cdbr-east-03.cleardb.com', 'b1ccdd76923f3f','
 5ec23673', 'quiz_answers');
 
 	//check connection
