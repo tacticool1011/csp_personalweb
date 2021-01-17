@@ -216,7 +216,7 @@ h2{
 }
 
 .header{
-  margin-left: 10%;
+  margin-left: 20%;
 }
 
 /*-----------------------*/
@@ -270,67 +270,68 @@ input[type=submit]:hover{
   color:  #050505;
 }
 
+.quizQ{
+  margin: 0 auto;
+  width: 40%;
+  margin-bottom: 5%;
+  margin-left: 45%;
+}
 
+.specificQ{
+  text-align: left;
+}
 
-/*.container {
-  display: block;
-  position: relative;
-  padding-left: 35px;
-  margin-bottom: 12px;
-  cursor: pointer;
-  font-size: 22px;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
+.specificQ label{
   font-family: regularFont;
 }
 
+/* Progress bar CSS */
 
-.container input {
-  position: absolute;
-  opacity: 0;
-  cursor: pointer;
-}
+.progress *:not([data-progress]) {
+  margin: 5px 0;
+  font-size: 18px;
 
-.checkmark {
-  position: absolute;
-  top: 0;
-  left: 40%;
-  height: 25px;
-  width: 25px;
-  background-color: #eee;
-  border-radius: 50%;
 }
 
 
-.container:hover input ~ .checkmark {
-  background-color: #ccc;
+.progress {
+  width: 100%;
+  max-width: 700px;
+  padding: 15px;
+  box-sizing: border-box;
+  margin: 0 auto;
 }
 
-
-.container input:checked ~ .checkmark {
-  background-color: #32ce32;
+.progress p{
+  font-family: regularFont;
 }
 
+.progress [data-progress] {
+  height: 30px;
+  box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.25) inset;
+  border-radius: 15px;
+  margin: 10px 0 10px 0;
+  overflow: hidden;
+}
 
-.checkmark:after {
+[data-progress]::after {
   content: "";
-  position: absolute;
-  display: none;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  background-color: #32ce32;;
+  width: 0;
+  height: 100%;
+  box-sizing: border-box;
+  font-size: 18px;
+  color: white;
+  padding: 0 3px;
+  transition: 2s;
 }
 
-
-.container input:checked ~ .checkmark:after {
-  display: block;
+[data-progress].animate-progress::after {
+  color: black;
+  font-family: regularFont;
+  content: attr(data-progress) "%";
+  width: var(--animate-progress);
 }
-
-
-.container .checkmark:after {
-  top: 9px;
-  left: 9px;
-  width: 8px;
-  height: 8px;
-  border-radius: 50%;
-  background: white;
-}*/
