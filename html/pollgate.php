@@ -1,7 +1,17 @@
+<?php
+	if(isset($_COOKIE['username'])){
+		header('Location: pollresults.php');
+	}
+	if(isset($_POST['submit'])){
+		$username = htmlentities($_POST['username']);
+		setcookie('username', $username, time() + (2 * 365 * 24 * 60 * 60));
+		header('Location: poll.php');
+	} 
+?>
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Quiz | Andrew Zheng</title>
+		<title>POLL | Andrew Zheng</title>
 		<link rel="stylesheet" type="text/css" href="../css/personalweb.css">
 		<script>
 			var prevScrollpos = window.pageYOffset;
@@ -46,11 +56,14 @@
 			</section>
 		<section class="quiz">
 			<div>
-				<h2 class="header">QUIZ</h2>
+				<h2 class="header">POLL - CRUCIAL TOPICS</h2>
 			</div>
-			<form action="question1.php" method = "post" id="quiz" class="question">
+			<form method = "post" id="quiz" class="question">
 					<h3>READY TO GET STARTED?</h3>
-					<input type="submit" value="Continue" class="btnsubmit"/>
+					<div style="margin: 0 auto; margin-bottom: 5%;">
+						<input type = "text" name="username" placeholder="Please enter your name" required/>
+					</div>
+					<input type="submit"  name="submit" class="btnsubmit"/>
 			</form>
 		</section>
 	</body>

@@ -2,7 +2,7 @@
 	session_start();
 	$_SESSION['question-8-answers'] = $_POST['question-8-answers'];
 	//connect to databse
-	$conn = mysqli_connect('us-cdbr-east-03.cleardb.com', 'b1ccdd76923f3f','5ec23673', 'heroku_343c6c1b771a826');
+	include('db_connect_quiz.php');
 
 	//check connection
 	if(!$conn){
@@ -10,7 +10,7 @@
 	}
 
 	//write query for all answers
-	$sql = 'SELECT * FROM problems';
+	$sql = 'SELECT id, correctans FROM problems ORDER BY id';
 
 	//make query & get result
 	$result = mysqli_query($conn, $sql);
@@ -64,7 +64,7 @@
 									<a href="quiz.html" class="special">QUIZ</a>
 								</li>
 								<li>
-									<a href="http://www.usaco.org/index.php?page=staff" target="_blank" class="special">CONTACT</a>
+									<a href="pollgate.php" class="special">POLL</a>
 								</li>
 							</ul>
 					</div>

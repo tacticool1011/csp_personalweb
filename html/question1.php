@@ -38,7 +38,7 @@
 									<a href="quiz.html" class="special">QUIZ</a>
 								</li>
 								<li>
-									<a href="http://www.usaco.org/index.php?page=staff" target="_blank" class="special">CONTACT</a>
+									<a href="pollgate.php" class="special">POLL</a>
 								</li>
 							</ul>
 					</div>
