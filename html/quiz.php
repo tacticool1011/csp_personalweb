@@ -1,3 +1,24 @@
+<?php 
+	include('db_connect_quiz.php');
+
+	//check connection
+	if(!$conn){
+		echo 'Connection error: ' . mysqli_connect_error();
+	}
+	$newcounter = 0;
+	$update = "UPDATE counter SET increment=$newcounter";
+	if(!mysqli_query($conn, $update)){
+				echo 'query error: ' . mysqli_error($conn);
+	}
+
+	//write query for all answers
+	$sql = 'SELECT * FROM useranswers';
+
+	$wipeans = "UPDATE useranswers SET answer=NULL";
+	if(!mysqli_query($conn, $wipeans)){
+				echo 'query error: ' . mysqli_error($conn);
+	}
+?>
 <!DOCTYPE html>
 <html>
 	<head>
@@ -35,7 +56,7 @@
 									<a href="interests.html" class="special">INTERESTS</a>
 								</li>
 								<li>
-									<a href="quiz.html" class="special">QUIZ</a>
+									<a href="quiz.php" class="special">QUIZ</a>
 								</li>
 								<li>
 									<a href="pollgate.php" class="special">POLL</a>
@@ -48,7 +69,7 @@
 			<div>
 				<h2 class="header">QUIZ</h2>
 			</div>
-			<form action="question1.php" method = "post" id="quiz" class="question">
+			<form action="quizredirect.php" method = "post" id="quiz" class="question">
 					<h3>READY TO GET STARTED?</h3>
 					<input type="submit" value="Continue" class="btnsubmit"/>
 			</form>

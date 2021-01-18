@@ -35,7 +35,7 @@
 									<a href="interests.html" class="special">INTERESTS</a>
 								</li>
 								<li>
-									<a href="quiz.html" class="special">QUIZ</a>
+									<a href="quiz.php" class="special">QUIZ</a>
 								</li>
 								<li>
 									<a href="pollgate.php" class="special">POLL</a>

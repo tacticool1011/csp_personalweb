@@ -1,6 +1,4 @@
 <?php
-	session_start();
-	$_SESSION['question-8-answers'] = $_POST['question-8-answers'];
 	//connect to databse
 	include('db_connect_quiz.php');
 
@@ -10,19 +8,40 @@
 	}
 
 	//write query for all answers
-	$sql = 'SELECT id, correctans FROM problems ORDER BY id';
+	// $sql = 'SELECT id, correctans FROM problems ORDER BY id';
+	$usersql = 'SELECT * FROM useranswers';
+
+	//make query & get result
+	$userresult = mysqli_query($conn, $usersql);
+
+	//fetch the resulting rows as an array
+	$useranswers = mysqli_fetch_all($userresult, MYSQLI_ASSOC);
+
+	//close connection
+	mysqli_close($conn);
+
+	//connect to databse
+	include('db_connect_quiz.php');
+
+	//check connection
+	if(!$conn){
+		echo 'Connection error: ' . mysqli_connect_error();
+	}
+
+	//write query for all answers
+	$sql = 'SELECT * FROM problems';
 
 	//make query & get result
 	$result = mysqli_query($conn, $sql);
 
 	//fetch the resulting rows as an array
 	$answers = mysqli_fetch_all($result, MYSQLI_ASSOC);
-
-	//free result from memory
-	mysqli_free_result($result);
-
-	//close connection
-	mysqli_close($conn);
+	$correct = 0;
+	foreach($answers as $answer){
+		if($answer['correctans'] == $useranswers[$answer['id'] - 1]['answer']){
+			$correct++;
+		}
+	}
 ?>
 <!DOCTYPE html>
 <html>
@@ -61,7 +80,7 @@
 									<a href="interests.html" class="special">INTERESTS</a>
 								</li>
 								<li>
-									<a href="quiz.html" class="special">QUIZ</a>
+									<a href="quiz.php" class="special">QUIZ</a>
 								</li>
 								<li>
 									<a href="pollgate.php" class="special">POLL</a>
@@ -75,40 +94,10 @@
 				<h2 class="header">QUIZ</h2>
 			</div>
 			<form action="question1.php" method = "post" id="quiz" class="question">
-					<?php 
-					$i = 0;
-					$correct = 0;
-					foreach($answers as $answer){ 
-						if($answer['id'] == '1' and $answer['correctans'] == $_SESSION['question-1-answers']){
-							$correct++;
-						}
-						if($answer['id'] == '2' and $answer['correctans'] == $_SESSION['question-2-answers']){
-							$correct++;
-						}
-						if($answer['id'] == '3' and $answer['correctans'] == $_SESSION['question-3-answers']){
-							$correct++;
-						}
-						if($answer['id'] == '4' and $answer['correctans'] == $_SESSION['question-4-answers']){
-							$correct++;
-						}
-						if($answer['id'] == '5' and $answer['correctans'] == $_SESSION['question-5-answers']){
-							$correct++;
-						}
-						if($answer['id'] == '6' and $answer['correctans'] == $_SESSION['question-6-answers']){
-							$correct++;
-						}
-						if($answer['id'] == '7' and $answer['correctans'] == $_SESSION['question-7-answers']){
-							$correct++;
-						}
-						if($answer['id'] == '8' and $answer['correctans'] == $_SESSION['question-8-answers']){
-							$correct++;
-						}
-						?>
-            		<?php }?>
             		<h3>YOUR RESULT:</h3>
             		<h3><?php echo $correct?>/8</h3>
-        			
 			</form>
 		</section>
 	</body>
 </html>
+
