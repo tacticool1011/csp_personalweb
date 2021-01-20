@@ -1,4 +1,4 @@
 <?php
-header("Location: /html/personalweb.html");
+header("Location: /html/preloader.html");
 die();
 ?>
