@@ -1,7 +1,7 @@
-body{
+body {
 	margin: 0px;
+ }
 
-}
 @font-face{
 	font-family: 'bestFont';
 	src: url('../fonts/JosefinSans-Bold.ttf');
@@ -205,6 +205,7 @@ h2{
   float: left;
   width: 40%;
   padding: 10px;
+  
 }
 
 .explanation h2{
@@ -213,6 +214,8 @@ h2{
 
 .descrip{
   font-family: regularFont;
+  line-height: 2.4;
+  margin-bottom: 20px;
 }
 
 .header{
