@@ -17,6 +17,22 @@
 
   		</script>
 	</head>
+	<style>
+		.quizQ{
+		  margin: 0 auto;
+		  width: 40%;
+		  margin-bottom: 5%;
+		  margin-left: 45%;
+		}
+
+		.specificQ{
+		  text-align: left;
+		}
+
+		.specificQ label{
+		  font-family: regularFont;
+		}
+	</style>
 	<body>
 		<!-- Nav Bar -->
 			<section class="navcontainer" id="disappear">

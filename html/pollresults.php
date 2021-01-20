@@ -36,6 +36,57 @@
 
   		</script>
 	</head>
+	<style>
+		.progress *:not([data-progress]) {
+		  margin: 5px 0;
+		  font-size: 18px;
+
+		}
+
+
+		.progress {
+		  width: 100%;
+		  max-width: 700px;
+		  padding: 15px;
+		  box-sizing: border-box;
+		  margin: 0 auto;
+		}
+
+		.progress p{
+		  font-family: regularFont;
+		}
+
+		.progress [data-progress] {
+		  height: 30px;
+		  box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.25) inset;
+		  border-radius: 15px;
+		  margin: 10px 0 10px 0;
+		  overflow: hidden;
+		}
+
+		[data-progress]::after {
+		  content: "";
+		  display: flex;
+		  justify-content: flex-end;
+		  align-items: center;
+		  background-color: #32ce32;;
+		  width: 0;
+		  height: 100%;
+		  box-sizing: border-box;
+		  font-size: 18px;
+		  color: white;
+		  padding: 0 3px;
+		  transition: 2s;
+		}
+
+		[data-progress].animate-progress::after {
+		  color: black;
+		  font-family: regularFont;
+		  content: attr(data-progress) "%";
+		  width: var(--animate-progress);
+		}
+		
+	</style>
 	<body>
 		<!-- Nav Bar -->
 			<section class="navcontainer" id="disappear">

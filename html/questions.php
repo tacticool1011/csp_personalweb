@@ -55,6 +55,70 @@
 			}
 
   		</script>
+  		<style>
+  			.quiz{
+			  padding-top: 75px;
+			}
+
+			.question{
+			  width: 60%;
+			  padding: auto;
+			  margin: 0 auto;
+			  text-align: center;
+			  border-width: 2px;
+			  border-style: solid;
+			  border-color: #050505;
+			  border-radius: 10px;
+			  margin-bottom: 50px;
+			}
+
+			.btnsubmit{
+			  margin-bottom: 50px;
+			}
+
+			.question h3{
+			  font-family: 'bestFont';
+			  font-size: 25px;
+			}
+
+			input[type=submit]{
+			  background-color: #050505;
+			  border-width: 2px;
+			  border-style: solid;
+			  border-color: #050505;
+			  color: #32ce32;
+			  padding: 16px 32px;
+			  text-decoration: none;
+			  margin: 4px 2px;
+			  font-family: regularFont;
+			  cursor: pointer;
+			  transition: color 0.3s ease;
+			  transition: background-color 0.3s ease;
+			}
+
+			input[type=submit]:hover{
+			  background-color: white;
+			  border-width: 2px;
+			  border-style: solid;
+			  border-color: #050505;
+			  color:  #050505;
+			}
+
+			.quizQ{
+			  margin: 0 auto;
+			  width: 40%;
+			  margin-bottom: 5%;
+			  margin-left: 45%;
+			}
+
+			.specificQ{
+			  text-align: left;
+			}
+
+			.specificQ label{
+			  font-family: regularFont;
+			}
+  		</style>
 	</head>
 	<body>
 		<!-- Nav Bar -->
@@ -85,7 +149,7 @@
 			</section>
 		<section class="quiz">
 			<div>
-				<h2 class="header">QUIZ</h2>
+				<h2 style="margin-left: 20%;">QUIZ</h2>
 			</div>
 			
 			<form action="quizredirect.php" method = "post" id="quiz" class="question">
